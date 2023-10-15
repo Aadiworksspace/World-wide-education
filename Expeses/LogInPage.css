@@ -1,0 +1,149 @@
+.world-wide-education {
+  position: absolute;
+  top: 48px;
+  left: calc(50% - 207px);
+  font-size: 36px;
+  font-weight: 600;
+  display: inline-block;
+  width: 413px;
+  height: 63px;
+}
+
+.daily-expenses {
+  position: absolute;
+  top: 129px;
+  left: calc(50% - 90px);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.amount,
+.name,
+.remark {
+  position: absolute;
+  top: 202px;
+  left: calc(50% - 241px);
+  font-weight: 600;
+}
+
+.amount,
+.remark {
+  top: 361px;
+}
+
+.remark {
+  top: 520px;
+  left: calc(50% - 240px);
+}
+
+.log-in-page-child,
+.log-in-page-inner,
+.log-in-page-item {
+  position: absolute;
+  top: 250px;
+  left: calc(50% - 279px);
+  border-radius: 50px;
+  background-color: #fff;
+  border: 4px solid #000;
+  box-sizing: border-box;
+  width: 556px;
+  height: 70px;
+}
+
+.log-in-page-inner,
+.log-in-page-item {
+  top: 409px;
+}
+
+.log-in-page-inner {
+  top: 568px;
+  left: calc(50% - 278px);
+}
+
+.log-in-page-child1 {
+  position: absolute;
+  top: 690px;
+  left: calc(50% - 88px);
+  border-radius: 30px;
+  background-color: #414db6;
+  width: 177px;
+  height: 61px;
+  border: none;
+  color: transparent;
+}
+
+.submit {
+  position: absolute;
+  top: 703px;
+  left: calc(50% - 51px);
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  background: #414db6;
+  border: none;
+}
+
+.whatsapp-image-2023-03-18-at-0-icon {
+  position: absolute;
+  top: 26px;
+  left: 35px;
+  width: 133px;
+  height: 171px;
+  object-fit: cover;
+}
+
+.log-in-page {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 832px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 32px;
+  color: #000;
+  font-family: Poppins;
+}
+
+#Name {
+  padding: 30px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+#Amount {
+  padding: 30px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+#Remark {
+  padding: 30px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+#addForm {
+  position: absolute;
+  left: calc(50% + 400px);
+}
+
+.New-Name {
+  visibility: hidden;
+}
+
+#message {
+  color: red;
+  font-size: 20px;
+  position: absolute;
+  font-weight: 600;
+  top: 650px;
+  left: calc(50% - 80px);
+}
+
+#Name {
+
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px;
+
+}

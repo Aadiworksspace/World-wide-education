@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="./LogInPage.css" />
+  <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+</head>
+
+<body>
+  <div class="log-in-page">
+    <div class="world-wide-education">World Wide Education</div>
+    <div class="daily-expenses">Daily Expenses</div>
+    <div class="name">Name</div>
+    <div class="amount">Amount</div>
+    <div class="remark">Remark</div>
+    <form id="addForm" class="New-Name">
+      <input id="NewName"></input>
+      <input type="submit" id="NewNameSubmit">
+    </form>
+
+
+    <form action="" id="myForm">
+      <select class="log-in-page-child" id="Name">
+
+      </select>
+      <input class="log-in-page-item" id="Amount"></input>
+      <input class="log-in-page-inner" id="Remark"></input>
+      <input type="submit" class="log-in-page-child1"></input>
+      <input type="submit" class="submit"></input>
+    </form>
+    <div id="message"></div>
+    <img class="whatsapp-image-2023-03-18-at-0-icon" alt="" src="./public/whatsapp-image-20230318-at-0106-1@2x.png" />
+  </div>
+</body>
+<script>
+  window.onload = function () {
+    fetch('/backend-getname', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then(response => response.json())
+      .then(responseData => {
+        for (let i = 0; i < responseData.length; i++) {
+          const newOptionValue = responseData[i].Name
+
+          // Get a reference to the select element
+          const selectElement = document.getElementById('Name');
+
+          // Create a new option element
+          const newOption = document.createElement('option');
+          newOption.value = newOptionValue;
+          newOption.text = newOptionValue;
+
+          // Add the new option to the select element
+          selectElement.appendChild(newOption);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  };
+
+
+  document.getElementById("addForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    // Get the value entered in the input field
+    const newOptionValue = document.getElementById('NewName').value;
+
+    // Get a reference to the select element
+    const selectElement = document.getElementById('Name');
+
+    // Create a new option element
+    const newOption = document.createElement('option');
+    newOption.value = newOptionValue;
+    newOption.text = newOptionValue;
+
+    // Add the new option to the select element
+    selectElement.appendChild(newOption);
+
+    // Clear the input field
+    document.getElementById('NewName').value = '';
+    document.getElementById("addForm").classList.add("New-Name")
+    data = {
+      Name: newOptionValue
+    }
+
+    fetch('/backend-name', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => response.json())
+      .then(responseData => {
+        // Handle the response from the backend
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+
+  });
+
+  document.getElementById("myForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const Name = document.getElementById("Name").value;
+    const Amount = document.getElementById("Amount").value;
+    const Remark = document.getElementById("Remark").value;
+    const data = {
+      Name: Name,
+      Amount: Amount,
+      Remark: Remark
+    }
+
+    document.getElementById("message").innerHTML = "send successfully"
+    setTimeout(() => {
+      document.getElementById("message").innerHTML = ""
+    }, 1500);
+    document.getElementById("Amount").value = ""
+    document.getElementById("Remark").value = ""
+
+
+    fetch('/backend-endpoint', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => response.json())
+      .then(responseData => {
+        // Handle the response from the backend
+        if (responseData.message == "Pass done") {
+          document.getElementById("addForm").classList.remove("New-Name")
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+  });
+</script>
+
+</html>

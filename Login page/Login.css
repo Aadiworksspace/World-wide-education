@@ -1,0 +1,139 @@
+.world-wide-education {
+  top: 48px;
+  left: calc(50% - 207px);
+  font-size: 36px;
+  display: inline-block;
+  width: 413px;
+  height: 63px;
+}
+.daily-expenses,
+.passward,
+.user,
+.world-wide-education {
+  position: absolute;
+  font-weight: 600;
+}
+.daily-expenses {
+  top: 129px;
+  left: calc(50% - 90px);
+  font-size: 24px;
+}
+.passward,
+.user {
+  top: 273px;
+  left: calc(50% - 240px);
+}
+.passward {
+  top: 466px;
+}
+.log-in-page-child,
+.log-in-page-item {
+  position: absolute;
+  top: 321px;
+  left: calc(50% - 278px);
+  border-radius: 50px;
+  background-color: #fff;
+  border: 4px solid #000;
+  box-sizing: border-box;
+  width: 556px;
+  height: 70px;
+}
+.log-in-page-item {
+  top: 514px;
+}
+.log-in-page-inner {
+  position: absolute;
+  top: 679px;
+  left: calc(50% - 88px);
+  border-radius: 30px;
+  background-color: #414db6;
+  width: 177px;
+  height: 61px;
+  border: none;
+  color: transparent;
+}
+.log-in {
+  position: absolute;
+  top: 691px;
+  left: calc(50% - 45px);
+  font-size: 28px;
+  font-weight: 500;
+  color: White;
+  background: #414db6;
+  border: none;
+}
+.whatsapp-image-2023-03-18-at-0-icon {
+  position: absolute;
+  top: 26px;
+  left: 35px;
+  width: 133px;
+  height: 171px;
+  object-fit: cover;
+}
+.log-in-page {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 821px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 32px;
+  color: #000;
+  font-family: Poppins;
+}
+
+#User {
+  padding: 30px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+#Passward {
+  padding: 30px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+#Enter-fail{
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 230px;
+  left: calc(50% - 203px);
+}
+#checkbox1{
+  position: absolute;
+  top: 635px;
+  left: 520px;
+  transform: scale(1.5);
+  border: 2px solid black;
+}
+#checkbox2{
+  position: absolute;
+  top: 635px;
+  left: 770px;
+  transform: scale(1.5);
+}
+.expenses{
+  font-weight: 600;
+  font-size: 20px;
+  color: red;
+  position: absolute;
+  top: 630px;
+  left: 550px;
+}
+.fees-entries{
+  font-weight: 600;
+  font-size: 20px;
+  color: red;
+  position: absolute;
+  top: 630px;
+  left: 800px;
+}
+#checkfail{
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 590px;
+  left: calc(50% - 160px);
+}

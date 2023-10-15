@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="./Login.css" />
+  <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+</head>
+
+<body>
+  <div class="log-in-page">
+    <div class="world-wide-education">World Wide Education</div>
+    <!-- <div class="daily-expenses">Daily Expenses</div> -->
+    <div class="user">User</div>
+    <div class="passward">Passward</div>
+    <div id="checkfail"></div>
+    <div id="Enter-fail"></div>
+    <form id="myForm">
+      <input class="log-in-page-child" id="User"></input>
+      <input class="log-in-page-item" type="password" id="Passward"></input>
+      <input class="log-in-page-inner" type="submit"></input>
+      <div class="fees-entries">Fees Entry</div>
+      <div class="expenses">Expenses</div>
+      <input type="checkbox" id="checkbox1" value="Expenses"></input>
+      <input type="checkbox" id="checkbox2" value="Fees-entries"></input>
+      <input class="log-in" type="submit" value="Log-In"></input>
+    </form>
+    <img class="whatsapp-image-2023-03-18-at-0-icon" alt="" src="./public/whatsapp-image-20230318-at-0106-1@2x.png" />
+  </div>
+</body>
+<script>
+  document.getElementById("myForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const User = document.getElementById("User").value;
+    const Passward = document.getElementById("Passward").value;
+    const checkbox1 = document.getElementById("checkbox1");
+    const checkbox2 = document.getElementById("checkbox2");
+
+    (() => {
+      if (checkbox1.checked && checkbox2.checked) {
+        document.getElementById("checkfail").innerHTML = "Please select only one check box!"
+        return page = "Please select only one check box!"
+      }
+      else if (checkbox1.checked) {
+        document.getElementById("checkfail").innerHTML = ""
+        return page = "Expenses"
+      }
+      else if (checkbox2.checked) {
+        document.getElementById("checkfail").innerHTML = ""
+        return page = "Fees-entries"
+      }
+      else {
+        document.getElementById("checkfail").innerHTML = "Please select one check box!"
+        return page = "Please select one check box!"
+      }
+    })();
+
+    const data = {
+      User: User,
+      Passward: Passward,
+      page: page
+    };
+
+    fetch('/receive-user', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((responseData) => {
+        if (responseData.message == "NotDone") {
+          document.getElementById("Enter-fail").innerHTML = "Please Enter a valid Email and Passward!"
+        }
+        else if (responseData.message == "Please select only one check box!") {
+          document.getElementById("checkfail").innerHTML = "Please select only one check box!"
+        }
+        else if (responseData.message == "Please select one check box!") {
+          document.getElementById("checkfail").innerHTML = "Please select one check box!"
+        }
+        else {
+          document.getElementById("Enter-fail").innerHTML = ""
+          window.location.href = responseData.message
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  });
+</script>
+
+</html>

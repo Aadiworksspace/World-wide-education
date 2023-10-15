@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "world-wide-education-402106",
+  "private_key_id": "4dfa1ae95edb1c646e90ff6fbc3f3238e3b47905",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDZU/anRd/ZwgRv\nxVuoGr6Al427hrio888BVlurnqqd2GiDv9b6tyn2T2xafgRSmpaEwgAtaLbPmVNX\nxkQjU2RsIXb746/Y0mGlFh64blOf7J9zXKydyj+85wM+hV8/ussw/J1bR/RyLKJ6\nr+k+WLwRBZUmVcjwUzXTjZOFVftngvpkQ0cPrB20FzXAFFEEzoi8MPFLJnRP0JFD\nxXNQnjxMR2l5YfLblRxVbE6aAtRc0VxLv5iIrCim6NMvpORo/v/SJSgEKTfdzIvp\nHtiqrctzNuLBUwUVg4+OEHLrzp2vzc0y3GoWpoR1b7GtkbNWr/B2lviJQznAKYb+\nNkg2yYs7AgMBAAECggEAXR9/RznHq5VZNVOJ7MRY8Nz/3GTj53FhOB969FTuouhC\nEII5agDmOCbcNQJec87NxGEkllCSVO5MKgZI2CI5m6PTSifMB8pOEOEjlL+hkZtg\nz5vcU1iAaz9JwpZ/s90kh/8WpjB07B94F74c4ZxAKcMMn/qOOXxOSjIWDkJDkZxh\nxtdhyiP7DYuPZhcNwtuC7XOvIwxoAF5ERkPgvIUb9kPffaY6VCGJndJQrqVGVE9x\nO1zOwGsxPDK3j5eXKt50SWnDRV9Qh56ue7RDNs3+J95NvyfWRBioFP9eJWXITo4H\nuPOVQ+wBzpI7YAwFU+CJKvtG3mlxUJK0YZAVdPKB8QKBgQD1PtS/MBk0ApANgDK5\nNvOkSoGQwhj2VcrnSYtGXg1YimbTbn2TPUIN1sukK7eyq5g6igN9t07cY4oIjWYx\nhbpMbf8Bou31vmhvi6owD8YcRjdtbmwf+Lb4/WVAagw7uO71DTC1aUQNQfWzBoVp\nrGxkDCaYDiNW9YBcV7cxiVeCHwKBgQDi27nlvNfpS/M61Np3K0i5zuITZ+3CHzta\nMB7fZt8QwqmsLlHuhSWWZ3kiLAT2+kzmXeTtBnnHqkF1OxNx3fwEJLM5shrOP2oJ\nDbNjPVgPPj3Q+43/3COSqqL2zqn0PTnW3KgYAu/zbksstG+fhaLpiFqp3m7jl/42\nMGIbrpgrZQKBgQC2HclojHQ6zihhDjEcnzUAbJ+YerqEuyLo7BEz2QX6GRTQr30r\nCNNzaW1h5WENmiV6WyDKi4RRXs2TGkWoQtEcjpZOhcpFsfbl1oY0GJKaTn48kkJS\n36QodCtrURTyiJtSeFASdzAk1DV7kz0hQvxeszM5uU3+9mIysKSGcaH9KwKBgQCG\n7/eFRWyQIlMNHWrNE3vwubQTou/zVaxyGsliTMhGKePOvMaTP7N54RZWUySo230+\nUX9H1WA+eXDyEC+ivU2YEVRh7ySupV2nAPVBBE4K0xTl55sxI3otVT4V3BuPYZOz\n0BBUJ/seKu6gKrtygYTDsA1tmRcQXWoiRWk12gY9WQKBgAFvW2eqHPuDHpIu+iuW\nQjGYUxweIkP48LF6iHt0MvF6QR9oSfjAPiKF5VexT/YMDx3lH6az5KMvgK4RhcDz\nIOng0lTuFNRMd0eSoc9oP1QVHhAxuNBgNa62l4ekeJRotIK+N6lb3Yyo1sSC6Obb\naXRtWHWFCbp6AunDazWSIR9C\n-----END PRIVATE KEY-----\n",
+  "client_email": "world-wide-education@world-wide-education-402106.iam.gserviceaccount.com",
+  "client_id": "102551362293815662430",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/world-wide-education%40world-wide-education-402106.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
